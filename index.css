@@ -1,0 +1,291 @@
+#mainCard{
+    margin-top: 80px;
+}
+ 
+ .body{
+    font-family: "Faculty Glyphic", serif;
+ }
+.make{
+    background-color: rgba(224, 255, 224, 0.781);
+}
+#formCard{
+    background-color: rgba(83, 145, 83, 0.747);
+    border: 2px dotted white;
+}
+#startCard{
+    border: 3px solid white;
+    background-image: url(Image/gettyimages-1356443550-640x640.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    position: relative;
+}
+.justt{
+    text-align: justify;
+}
+#firstCard{
+    border: 3px solid white;
+    background-image: url(Image/gettyimages-1356443550-640x640.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    display: none;
+}
+#forList li{
+    color: rgb(5, 204, 5);
+    padding: 10px;
+    background-color: rgb(229, 252, 229);
+    border-radius: 10px;
+}
+#forList li:hover{
+    background-color: rgba(2, 90, 2, 0.856);
+    color: white;
+    border-radius: 10px;
+    transition: .4s ease-in-out;
+    cursor: pointer;
+}
+#revie{
+    overflow: hidden;
+}
+#downbtn button{
+    border: 1px solid white;
+}
+
+/* SECOND QUIZ */
+#secondCard{
+    border: 3px solid white;
+    background-image: url(Image/gettyimages-1356443550-640x640.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    position: relative;
+    display: none;
+}
+/* THIRD QUIZ */
+#thirdCard{
+    border: 3px solid white;
+    background-image: url(Image/gettyimages-1356443550-640x640.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    position: relative;
+    display: none;
+}
+/* FORTH QUIZ */
+#forthCard{
+    border: 3px solid white;
+    background-image: url(Image/gettyimages-1356443550-640x640.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    position: relative;
+    display: none;
+}
+/* FIFTH QUIZ */
+#fifthCard{
+    border: 3px solid white;
+    background-image: url(Image/gettyimages-1356443550-640x640.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    position: relative;
+    display: none;
+}
+
+/* SIXTH QUIZ */
+#sixthCard{
+    border: 3px solid white;
+    background-image: url(Image/gettyimages-1356443550-640x640.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    position: relative;
+    display: none;
+}
+/* SEVENTH QUIZ */
+#seventhCard{
+    border: 3px solid white;
+    background-image: url(Image/gettyimages-1356443550-640x640.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    position: relative;
+    display: none;
+}
+/* EIGHTH QUIZ */
+#eighthCard{
+    border: 3px solid white;
+    background-image: url(Image/gettyimages-1356443550-640x640.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    position: relative;
+    display: none;
+}
+/* NINETH QUIZ */
+#ninethCard{
+    border: 3px solid white;
+    background-image: url(Image/gettyimages-1356443550-640x640.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    position: relative;
+    display: none;
+}
+/* TENTH QUIZ */
+#tenthCard{
+    border: 3px solid white;
+    background-image: url(Image/gettyimages-1356443550-640x640.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    position: relative;
+    display: none;
+}
+/* ELEVENTH QUIZ */
+#eleventhCard{
+    border: 3px solid white;
+    background-image: url(Image/gettyimages-1356443550-640x640.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    position: relative;
+    display: none;
+}
+/* TWELVETH QUIZ */
+#twelvethCard{
+    border: 3px solid white;
+    background-image: url(Image/gettyimages-1356443550-640x640.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    position: relative;
+    display: none;
+}
+/* THIRTEEN QUIZ */
+#thirteenthCard{
+    border: 3px solid white;
+    background-image: url(Image/gettyimages-1356443550-640x640.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    position: relative;
+    display: none;
+}
+/* FORTHEEN QUIZ */
+#forteenthCard{
+    border: 3px solid white;
+    background-image: url(Image/gettyimages-1356443550-640x640.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    position: relative;
+    display: none;
+}
+/* FIFTEENTH QUIZ */
+#fifteenthCard{
+    border: 3px solid white;
+    background-image: url(Image/gettyimages-1356443550-640x640.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    position: relative;
+    display: none;
+}
+/* SIXTEENTH QUIZ */
+#sixteenthCard{
+    border: 3px solid white;
+    background-image: url(Image/gettyimages-1356443550-640x640.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    position: relative;
+    display: none;
+}
+/* SEVENTEENTH QUIZ */
+#seventeenthCard{
+    border: 3px solid white;
+    background-image: url(Image/gettyimages-1356443550-640x640.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    position: relative;
+    display: none;
+}
+/* EIGHTEENTH QUIZ */
+#eighteenthCard{
+    border: 3px solid white;
+    background-image: url(Image/gettyimages-1356443550-640x640.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    position: relative;
+    display: none;
+}
+/* NINETEENTH QUIZ */
+#nineteenthCard{
+    border: 3px solid white;
+    background-image: url(Image/gettyimages-1356443550-640x640.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    position: relative;
+    display: none;
+}
+/* TWENTYY QUIZ */
+#twentyyCard{
+    border: 3px solid white;
+    background-image: url(Image/gettyimages-1356443550-640x640.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    position: relative;
+    display: none;
+}
+/* LAST NOTE QUIZ */
+#lastNoteCard{
+    border: 3px solid white;
+    background-image: url(Image/gettyimages-1356443550-640x640.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    position: relative;
+    display: none;
+}
+
+#forList1 li{
+    color: rgb(5, 204, 5);
+    padding: 8px;
+    margin: 5px;
+    background-color: rgb(229, 252, 229);
+    border-radius: 10px;
+}
+
+/* FOR CALCULATOR */
+#inputCard input{
+    width: 80px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+#inputCard{
+    background: transparent;
+}
+#maiCard{
+    background: transparent;
+}
+
+#quizz{
+    color: red;
+    animation: gifted 1s infinite;
+    font-family: "Roboto", serif;
+}
+
+/* ANIMATION */
+@keyframes gifted {
+    0%   {color:red}
+    25%  {color:yellow}
+    50%  {color: red}
+    75%  {color:yellow}
+    100% {color:red}
+  }

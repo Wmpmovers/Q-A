@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="Image/images-removebg-preview (2).png">
+    <link rel="icon" href="/Images/New logo.JPG" type="image/icon type">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+        
+        
+
+</head>
+
+<body class="body bg-secondary">
+    <nav class="navbar navbar-expand-lg bg-success bg-gradient shadow-4 fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold text-white" href="#" onclick="quiz()">QUIZ</a>
+            <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-bold" href="#">About Quiz</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white fw-bold" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Contact
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="d-flex justify-content-center p-2" id="mainCard">
+        <div class="card p-3 text-white shadow" style="width: 40rem;" id="startCard">
+            <h2 class=" fw-bold" id="quizz">Welcome to Giftech Quiz Session</h2>
+            <h5 class=" fw-bold text-white">Note: There are 20 questions for you to answer, each questions carries 1 mark.</h5>
+            <hr>
+            <p class="make p-2 text-dark rounded">Make sure you confirm your answers in the input field before you click on the <span class="bg-success text-white pe-2 ps-2 rounded">next</span> button, your answers and scores would be shown to you at the end of the quiz. Thanks!!!</p>
+            <p class="fw-bold">Please fill in the form below to start quiz... ENJOY!!!</p>
+            <div class="d-flex justify-content-center">
+                <div class="card p-3 mb-3" style="width: 35rem;" id="formCard">
+                    <form id="form-input">
+                        <div class="mb-3 text-center">
+                            <label for="exampleInputEmail1" class="form-label text-white fs-5">Your Name</label>
+                            <input type="text" class="form-control" name="yName" id="exampleInputName"
+                                aria-describedby="emailHelp" required>
+                        </div>
+                        
+                        <div class="mb-3 text-center">
+                            <label for="exampleInputPassword1" class="form-label text-white fs-5">Phone Number</label>
+                            <input type="Number" class="form-control" name="pNumber" id="exampleInputNumber" required>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <button type="submit" class="btn btn-success">Start Quiz</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="card p-3 text-white shadow" style="width: 40rem;" id="firstCard">
+            <h1 class=" fw-bold" id="quizz">Giftech Quiz</h1>
+            <div class="d-flex justify-content-between">
+                <h3>Question 1/20</h3>
+            </div>
+            <p class="fw-bold">How many planet do we have around the solar system? <input type="text" name="answers"
+                    id="answers" placeholder=" ???" value="" class="rounded-2 fw-bold"
+                    style="height: 35px;"></p>
+            <ol type="A" id="forList">
+                <li class="mt-3 fw-bold" id="five" onclick="answers.value = 'Five'"> Five</li>
+                <li class="mt-3 fw-bold" id="seven" onclick="answers.value = 'Seven'"> Seven</li>
+                <li class="mt-3 fw-bold" id="twenty" onclick="answers.value = 'Twenty'"> Twenty</li>
+                <li class="mt-3 fw-bold" id="eleven" onclick="answers.value = 'Eleven'"> Eleven</li>
+            </ol>
+            <div class="d-flex justify-content-evenly" id="downbtn">
+                <!-- <button class="btn bg-success text-white" onclick="submitt()">Submit</button> -->
+                <button class="btn bg-success text-white" onclick="next()" id="next1">Next</button>
+            </div>
+        </div>
+
+
+        <!-- SECOND QUIZ -->
+        <div class="card p-3 text-white" style="width: 40rem;" id="secondCard">
+            <h1 class=" fw-bold" id="quizz">Giftech Quiz</h1>
+            <div class="d-flex justify-content-between">
+                <h3>Question 2/20</h3>
+            </div>
+            <p class="fw-bold">Which planet is known as the "Red Planet"? <input type="text" name="answers2"
+                    id="answers2" placeholder=" ???" value="" class="rounded-2 fw-bold"
+                    style="height: 35px;"></p>
+            <ol type="A" id="forList">
+                <li class="mt-3 fw-bold" id="pluto" onclick="answers2.value = 'Pluto'"> Pluto</li>
+                <li class="mt-3 fw-bold" id="mars" onclick="answers2.value = 'Mars'"> Mars</li>
+                <li class="mt-3 fw-bold" id="brazil" onclick="answers2.value = 'Brazil'"> Brazil</li>
+                <li class="mt-3 fw-bold" id="asia" onclick="answers2.value = 'Asia'"> Asia</li>
+            </ol>
+            <div class="d-flex justify-content-evenly" id="downbtn">
+                <!-- <button class="btn bg-success text-white" onclick="submitt2()">Submit</button> -->
+                <button class="btn bg-success text-white" onclick="next2()">Next</button>
+            </div>
+        </div>
+
+        <!-- THIRD QUIZ -->
+        <div class="card p-3 text-white" style="width: 40rem;" id="thirdCard">
+            <h1 class=" fw-bold" id="quizz">Giftech Quiz</h1>
+            <div class="d-flex justify-content-between">
+                <h3>Question 3/20</h3>
+            </div>
+            <p class="fw-bold">Whats the capital of Canada? <input type="text" name="answers3" id="answers3"
+                    placeholder=" ???" value="" class="rounded-2 fw-bold" style="height: 35px;"></p>
+            <ol type="A" id="forList">
+                <li class="mt-3 fw-bold" id="ottawa" onclick="answers3.value = 'Ottawa'"> Ottawa</li>
+                <li class="mt-3 fw-bold" id="toronto" onclick="answers3.value = 'Toronto'"> Toronto</li>
+                <li class="mt-3 fw-bold" id="america" onclick="answers3.value = 'America'"> America</li>
+                <li class="mt-3 fw-bold" id="united" onclick="answers3.value = 'United Kingdom'"> United Kingdom</li>
+            </ol>
+            <div class="d-flex justify-content-evenly" id="downbtn">
+                <!-- <button class="btn bg-success text-white" onclick="submitt3()">Submit</button> -->
+                <button class="btn bg-success text-white" onclick="next3()">Next</button>
+            </div>
+        </div>
+
+        <!-- FORTH QUIZ -->
+        <div class="card p-3 text-white" style="width: 40rem;" id="forthCard">
+            <h1 class=" fw-bold" id="quizz">Giftech Quiz</h1>
+            <div class="d-flex justify-content-between">
+                <h3>Question 4/20</h3>
+                <div class="pe-5" id="revie4"></div>
+            </div>
+            <p class="fw-bold">Who is the richest man in the world? <input type="text" name="answers4" id="answers4"
+                    placeholder=" ???" value="" class="rounded-2 fw-bold" style="height: 35px;"></p>
+            <ol type="A" id="forList">
+                <li class="mt-3 fw-bold" id="bill" onclick="answers4.value = 'Bill Gate'"> Bill Gate</li>
+                <li class="mt-3 fw-bold" id="mark" onclick="answers4.value = 'Mark Zukerberg'"> Mark Zukerberg</li>
+                <li class="mt-3 fw-bold" id="elon" onclick="answers4.value = 'Elon Musk'"> Elon Musk</li>
+                <li class="mt-3 fw-bold" id="warren" onclick="answers4.value = 'Warren Buffet'"> Warren Buffet</li>
+            </ol>
+            <div class="d-flex justify-content-evenly" id="downbtn">
+                <!-- <button class="btn bg-success text-white" onclick="submitt4()">Submit</button> -->
+                <button class="btn bg-success text-white" onclick="next4()">Next</button>
+            </div>
+        </div>
+
+        <!-- FIFTH QUIZ -->
+        <div class="card p-3 text-white" style="width: 40rem;" id="fifthCard">
+            <h1 class=" fw-bold" id="quizz">Giftech Quiz</h1>
+            <div class="d-flex justify-content-between">
+                <h3>Question 5/20</h3>
+                <div class="pe-5" id="revie5"></div>
+            </div>
+            <p class="fw-bold">Which Country won the 2018 Fifa WorldCup? <input type="text" name="answers5"
+                    id="answers5" placeholder=" ???" value="" class="rounded-2 fw-bold"
+                    style="height: 35px;"></p>
+            <ol type="A" id="forList">
+                <li class="mt-3 fw-bold" id="france" onclick="answers5.value = 'France'"> France</li>
+                <li class="mt-3 fw-bold" id="brazill" onclick="answers5.value = 'Brazil'">Brazil</li>
+                <li class="mt-3 fw-bold" id="argentina" onclick="answers5.value = 'Argentina'"> Argentina</li>
+                <li class="mt-3 fw-bold" id="morroco" onclick="answers5.value = 'Morroco'"> Morroco</li>
+            </ol>
+            <div class="d-flex justify-content-evenly" id="downbtn">
+                <!-- <button class="btn bg-success text-white" onclick="submitt5()">Submit</button> -->
+                <button class="btn bg-success text-white" onclick="next5()">Next</button>
+            </div>
+        </div>
+
+        <!-- SIXTH QUIZ -->
+        <div class="card p-3 text-white" style="width: 40rem;" id="sixthCard">
+            <h1 class=" fw-bold" id="quizz">Giftech Quiz</h1>
+            <div class="d-flex justify-content-between">
+                <h3>Question 6/20</h3>
+                <div class="pe-5" id="revie6"></div>
+            </div>
+            <p class="fw-bold">Who was the first president of United State? <input type="text" name="answers6"
+                    id="answers6" placeholder=" ???" value="" class="rounded-2 fw-bold"
+                    style="height: 35px;"></p>
+            <ol type="A" id="forList">
+                <li class="mt-3 fw-bold" id="barrack" onclick="answers6.value = 'Barrack Obama'"> Barrack Obama</li>
+                <li class="mt-3 fw-bold" id="george" onclick="answers6.value = 'George Washington'">George Washington
+                </li>
+                <li class="mt-3 fw-bold" id="donald" onclick="answers6.value = 'Donald Trump'"> Donald Trump</li>
+                <li class="mt-3 fw-bold" id="elonn" onclick="answers6.value = 'Elon Musk'"> Elon Musk</li>
+            </ol>
+            <div class="d-flex justify-content-evenly" id="downbtn">
+                <!-- <button class="btn bg-success text-white" onclick="submitt6()">Submit</button> -->
+                <button class="btn bg-success text-white" onclick="next6()">Next</button>
+            </div>
+        </div>
+
+        <!-- SEVENTH QUIZ -->
+        <div class="card p-3 text-white" style="width: 40rem;" id="seventhCard">
+            <h1 class=" fw-bold" id="quizz">Giftech Quiz</h1>
+            <div class="d-flex justify-content-between">
+                <h3>Question 7/20</h3>
+                <div class="pe-5" id="revie7"></div>
+            </div>
+            <p class="fw-bold">Who was the first president of Nigeria? <input type="text" name="answers7" id="answers7"
+                    placeholder=" ???" value="" class="rounded-2 fw-bold" style="height: 35px;"></p>
+            <ol type="A" id="forList">
+                <li class="mt-3 fw-bold" id="sanni" onclick="answers7.value = 'Sanni Abacha'"> Sanni Abacha</li>
+                <li class="mt-3 fw-bold" id="olusegun" onclick="answers7.value = 'Olusegun Obasanjo'"> Olusegun Obasanjo
+                </li>
+                <li class="mt-3 fw-bold" id="enest" onclick="answers7.value = 'Ernest Shonekan'"> Ernest Shonekan</li>
+                <li class="mt-3 fw-bold" id="namdi" onclick="answers7.value = 'Nnamdi Azikiwe'"> Nnamdi Azikiwe</li>
+            </ol>
+            <div class="d-flex justify-content-evenly" id="downbtn">
+                <!-- <button class="btn bg-success text-white" onclick="submitt7()">Submit</button> -->
+                <button class="btn bg-success text-white" onclick="next7()">Next</button>
+            </div>
+        </div>
+
+        <!-- EIGHT QUIZ -->
+        <div class="card p-3 text-white" style="width: 40rem;" id="eighthCard">
+            <h1 class=" fw-bold" id="quizz">Giftech Quiz</h1>
+            <div class="d-flex justify-content-between">
+                <h3>Question 8/20</h3>
+                <div class="pe-5" id="revie8"></div>
+            </div>
+            <p class="fw-bold">Which organ is primarily responsible for filtering blood and producing urine? <input
+                    type="text" name="answers8" id="answers8" placeholder=" ???" value=""
+                    class="rounded-2 fw-bold" style="height: 35px;"></p>
+            <ol type="A" id="forList">
+                <li class="mt-3 fw-bold" id="heart" onclick="answers8.value = 'Heart'"> Heart</li>
+                <li class="mt-3 fw-bold" id="kidney" onclick="answers8.value = 'Kidney'"> Kidney</li>
+                <li class="mt-3 fw-bold" id="liver" onclick="answers8.value = 'Liver'"> Liver</li>
+                <li class="mt-3 fw-bold" id="lungs" onclick="answers8.value = 'Lungs'"> Lungs</li>
+            </ol>
+            <div class="d-flex justify-content-evenly" id="downbtn">
+                <!-- <button class="btn bg-success text-white" onclick="submitt8()">Submit</button> -->
+                <button class="btn bg-success text-white" onclick="next8()">Next</button>
+            </div>
+        </div>
+
+        <!-- NINETH QUIZ -->
+        <div class="card p-3 text-white" style="width: 40rem;" id="ninethCard">
+            <h1 class=" fw-bold" id="quizz">Giftech Quiz</h1>
+            <div class="d-flex justify-content-between">
+                <h3>Question 9/20</h3>
+                <div class="pe-5" id="revie9"></div>
+            </div>
+            <p class="fw-bold">Identify the correct sentence... <input type="text" name="answers9" id="answers9"
+                    placeholder=" ???" value="" class="rounded-2 fw-bold" style="height: 35px;"></p>
+            <ol type="A" id="forList">
+                <li class="mt-3 fw-bold" id="she1" onclick="answers9.value = 'She dont like the movie.'"> She dont like
+                    the movie.</li>
+                <li class="mt-3 fw-bold" id="she2" onclick="answers9.value = 'She doesnt like the movie.'"> She doesnt
+                    like the movie.</li>
+                <li class="mt-3 fw-bold" id="she3" onclick="answers9.value = 'She doesnt likes the movie.'"> She doesnt
+                    likes the movie.</li>
+                <li class="mt-3 fw-bold" id="she4" onclick="answers9.value = 'She not like the movie.'"> She not like
+                    the movie.</li>
+            </ol>
+            <div class="d-flex justify-content-evenly" id="downbtn">
+                <!-- <button class="btn bg-success text-white" onclick="submitt9()">Submit</button> -->
+                <button class="btn bg-success text-white" onclick="next9()">Next</button>
+            </div>
+        </div>
+
+        <!-- TENTH QUIZ -->
+        <div class="card p-3 text-white" style="width: 40rem;" id="tenthCard">
+            <h1 class=" fw-bold" id="quizz">Giftech Quiz</h1>
+            <div class="d-flex justify-content-between">
+                <h3>Question 10/20</h3>
+                <div class="pe-5" id="revie10"></div>
+            </div>
+            <p class="fw-bold">Which of the following word is synonym for "Elated"? <input type="text" name="answers10"
+                    id="answers10" placeholder=" ???" value="" class="rounded-2 fw-bold"
+                    style="height: 35px;"></p>
+            <ol type="A" id="forList">
+                <li class="mt-3 fw-bold" id="angry" onclick="answers10.value = 'Angry'"> Angry</li>
+                <li class="mt-3 fw-bold" id="sad" onclick="answers10.value = 'Sad'"> Sad</li>
+                <li class="mt-3 fw-bold" id="joyful" onclick="answers10.value = 'Joyful'"> Joyful</li>
+                <li class="mt-3 fw-bold" id="neutral" onclick="answers10.value = 'Neutral'">Neutral</li>
+            </ol>
+            <div class="d-flex justify-content-evenly" id="downbtn">
+                <!-- <button class="btn bg-success text-white" onclick="submitt10()">Submit</button> -->
+                <button class="btn bg-success text-white" onclick="next10()">Next</button>
+            </div>
+        </div>
+
+        <!-- ELEVENTH QUIZ -->
+        <div class="card p-3 text-white" style="width: 40rem;" id="eleventhCard">
+            <h1 class=" fw-bold" id="quizz">Giftech Quiz</h1>
+            <div class="d-flex justify-content-between">
+                <h3>Question 11/20</h3>
+                <div class="pe-5" id="revie11"></div>
+            </div>
+            <p class="fw-bold">Whats the smallest ocean in the world? <input type="text" name="answers11" id="answers11"
+                    placeholder=" ???" value="" class="rounded-2 fw-bold" style="height: 35px;"></p>
+            <ol type="A" id="forList">
+                <li class="mt-3 fw-bold" id="arctic" onclick="answers11.value = 'The Arctic Ocean'"> The Arctic Ocean
+                </li>
+                <li class="mt-3 fw-bold" id="atlantic" onclick="answers11.value = 'Atlantic Ocean'"> Atlantic Ocean</li>
+                <li class="mt-3 fw-bold" id="jordan" onclick="answers11.value = 'River Jordan'"> River Jordan</li>
+                <li class="mt-3 fw-bold" id="sea" onclick="answers11.value = 'River Niger'"> Red Sea</li>
+            </ol>
+            <div class="d-flex justify-content-evenly" id="downbtn">
+                <!-- <button class="btn bg-success text-white" onclick="submitt11()">Submit</button> -->
+                <button class="btn bg-success text-white" onclick="next11()">Next</button>
+            </div>
+        </div>
+
+        <!-- TWELVETH QUIZ -->
+        <div class="card p-3 text-white" style="width: 40rem;" id="twelvethCard">
+            <h1 class=" fw-bold" id="quizz">Giftech Quiz</h1>
+            <div class="d-flex justify-content-between">
+                <h3>Question 12/20</h3>
+                <div class="pe-5" id="revie12"></div>
+            </div>
+            <p class="fw-bold">Whats the square root of 64? <input type="text" name="answers12" id="answers12"
+                    placeholder=" ???" value="" class="rounded-2 fw-bold" style="height: 35px;"></p>
+            <ol type="A" id="forList">
+                <li class="mt-3 fw-bold" id="sixteen" onclick="answers12.value = '16'"> 16</li>
+                <li class="mt-3 fw-bold" id="eight" onclick="answers12.value = '8'"> 8</li>
+                <li class="mt-3 fw-bold" id="twenti" onclick="answers12.value = '24'"> 24</li>
+                <li class="mt-3 fw-bold" id="two" onclick="answers12.value = '32'"> 32</li>
+            </ol>
+            <div class="d-flex justify-content-evenly" id="downbtn">
+                <!-- <button class="btn bg-success text-white" onclick="submitt12()">Submit</button> -->
+                <button class="btn bg-success text-white" onclick="next12()">Next</button>
+            </div>
+        </div>
+
+        <!-- THIRTEENTH QUIZ -->
+        <div class="card p-3 text-white" style="width: 40rem;" id="thirteenthCard">
+            <h1 class=" fw-bold" id="quizz">Giftech Quiz</h1>
+            <div class="d-flex justify-content-between">
+                <h3>Question 13/20</h3>
+                <div class="pe-5" id="revie13"></div>
+            </div>
+            <p class="fw-bold">How many degree are in a circle? <input type="text" name="answers13" id="answers13"
+                    placeholder=" ???" value="" class="rounded-2 fw-bold" style="height: 35px;"></p>
+            <ol type="A" id="forList">
+                <li class="mt-3 fw-bold" id="deg90" onclick="answers13.value = '90deg'"> 90deg</li>
+                <li class="mt-3 fw-bold" id="deg180" onclick="answers13.value = '180deg'"> 180deg</li>
+                <li class="mt-3 fw-bold" id="deg360" onclick="answers13.value = '360deg'"> 360deg</li>
+                <li class="mt-3 fw-bold" id="deg0" onclick="answers13.value = '0deg'"> 0deg</li>
+            </ol>
+            <div class="d-flex justify-content-evenly" id="downbtn">
+                <!-- <button class="btn bg-success text-white" onclick="submitt13()">Submit</button> -->
+                <button class="btn bg-success text-white" onclick="next13()">Next</button>
+            </div>
+        </div>
+
+        <!-- FORTEENTH QUIZ -->
+        <div class="card p-3 text-white" style="width: 40rem;" id="forteenthCard">
+            <h1 class=" fw-bold" id="quizz">Giftech Quiz</h1>
+            <div class="d-flex justify-content-between">
+                <h3>Question 14/20</h3>
+                <div class="pe-5" id="revie14"></div>
+            </div>
+            <p class="fw-bold"> if X + 17 = 25, what's the value of "X"? <input type="text" name="answers14"
+                    id="answers14" placeholder=" ???" value="" class="rounded-2 fw-bold"
+                    style="height: 35px;"></p>
+            <ol type="A" id="forList">
+                <li class="mt-3 fw-bold" id="t13" onclick="answers14.value = '13'"> 13</li>
+                <li class="mt-3 fw-bold" id="s7" onclick="answers14.value = '8'"> 8</li>
+                <li class="mt-3 fw-bold" id="t30" onclick="answers14.value = '30'"> 30</li>
+                <li class="mt-3 fw-bold" id="f15" onclick="answers14.value = '15'"> 15</li>
+            </ol>
+            <div class="d-flex justify-content-evenly" id="downbtn">
+                <!-- <button class="btn bg-success text-white" onclick="submitt14()">Submit</button> -->
+                <button class="btn bg-success text-white" onclick="next14()">Next</button>
+            </div>
+        </div>
+
+        <!-- FIFTEENTH QUIZ -->
+        <div class="card p-3 text-white" style="width: 40rem;" id="fifteenthCard">
+            <h1 class=" fw-bold" id="quizz">Giftech Quiz</h1>
+            <div class="d-flex justify-content-between">
+                <h3>Question 15/20</h3>
+                <div class="pe-5" id="revie15"></div>
+            </div>
+            <p class="fw-bold"> What's the next prime number after "7" <input type="text" name="answers15"
+                    id="answers15" placeholder=" ???" value="" class="rounded-2 fw-bold"
+                    style="height: 35px;"></p>
+            <ol type="A" id="forList">
+                <li class="mt-3 fw-bold" id="t10" onclick="answers15.value = '10'"> 10</li>
+                <li class="mt-3 fw-bold" id="e11" onclick="answers15.value = '11'"> 11</li>
+                <li class="mt-3 fw-bold" id="f14" onclick="answers15.value = '14'"> 14</li>
+                <li class="mt-3 fw-bold" id="t21" onclick="answers15.value = '21'"> 21</li>
+            </ol>
+            <div class="d-flex justify-content-evenly" id="downbtn">
+                <!-- <button class="btn bg-success text-white" onclick="submitt15()">Submit</button> -->
+                <button class="btn bg-success text-white" onclick="next15()">Next</button>
+            </div>
+        </div>
+
+        <!-- SIXTEENTH QUIZ -->
+        <div class="card p-3 text-white" style="width: 40rem;" id="sixteenthCard">
+            <h1 class=" fw-bold" id="quizz">Giftech Quiz</h1>
+            <div class="d-flex justify-content-between">
+                <h3>Question 16/20</h3>
+                <div class="pe-5" id="revie16"></div>
+            </div>
+            <p class="fw-bold"> What's the force that keeps objects anchored to the earth? <input type="text"
+                    name="answers16" id="answers16" placeholder=" ???" value=""
+                    class="rounded-2 fw-bold" style="height: 35px;"></p>
+            <ol type="A" id="forList">
+                <li class="mt-3 fw-bold" id="air" onclick="answers16.value = 'Air'"> Air</li>
+                <li class="mt-3 fw-bold" id="gravity" onclick="answers16.value = 'Gravity'"> Gravity</li>
+                <li class="mt-3 fw-bold" id="space" onclick="answers16.value = 'Space'"> Space</li>
+                <li class="mt-3 fw-bold" id="solar" onclick="answers16.value = 'Solar System'"> Solar System</li>
+            </ol>
+            <div class="d-flex justify-content-evenly" id="downbtn">
+                <!-- <button class="btn bg-success text-white" onclick="submitt16()">Submit</button> -->
+                <button class="btn bg-success text-white" onclick="next16()">Next</button>
+            </div>
+        </div>
+
+        <!-- SEVENTEENTH QUIZ -->
+        <div class="card p-3 text-white" style="width: 40rem;" id="seventeenthCard">
+            <h1 class=" fw-bold" id="quizz">Giftech Quiz</h1>
+            <div class="d-flex justify-content-between">
+                <h3>Question 17/20</h3>
+                <div class="pe-5" id="revie17"></div>
+            </div>
+            <p class="fw-bold"> What's the chemical formular of water? <input type="text" name="answers17"
+                    id="answers17" placeholder=" ???" value="" class="rounded-2 fw-bold"
+                    style="height: 35px;"></p>
+            <ol type="A" id="forList">
+                <li class="mt-3 fw-bold" id="h2o2" onclick="answers17.value = 'H2O2'"> H2O2</li>
+                <li class="mt-3 fw-bold" id="h2o" onclick="answers17.value = 'H2O'"> H2O</li>
+                <li class="mt-3 fw-bold" id="co2" onclick="answers17.value = 'CO2'"> C02</li>
+                <li class="mt-3 fw-bold" id="h2" onclick="answers17.value = 'H2'"> H2</li>
+            </ol>
+            <div class="d-flex justify-content-evenly" id="downbtn">
+                <!-- <button class="btn bg-success text-white" onclick="submitt17()">Submit</button> -->
+                <button class="btn bg-success text-white" onclick="next17()">Next</button>
+            </div>
+        </div>
+
+        <!-- EIGHTEENTH QUIZ -->
+        <div class="card p-3 text-white" style="width: 40rem;" id="eighteenthCard">
+            <h1 class=" fw-bold" id="quizz">Giftech Quiz</h1>
+            <div class="d-flex justify-content-between">
+                <h3>Question 18/20</h3>
+                <div class="pe-5" id="revie18"></div>
+            </div>
+            <p class="fw-bold"> Which of the following is a noble gas? <input type="text" name="answers18"
+                    id="answers18" placeholder=" ???" value="" class="rounded-2 fw-bold"
+                    style="height: 35px;"></p>
+            <ol type="A" id="forList">
+                <li class="mt-3 fw-bold" id="oxygen" onclick="answers18.value = 'Oxygen'"> Oxygen</li>
+                <li class="mt-3 fw-bold" id="nitrogen" onclick="answers18.value = 'Nitrogen'"> Nitrogen</li>
+                <li class="mt-3 fw-bold" id="helium" onclick="answers18.value = 'Helium'"> Helium</li>
+                <li class="mt-3 fw-bold" id="hydrogen" onclick="answers18.value = 'Hydrogen'"> Hydrogen</li>
+            </ol>
+            <div class="d-flex justify-content-evenly" id="downbtn">
+                <!-- <button class="btn bg-success text-white" onclick="submitt18()">Submit</button> -->
+                <button class="btn bg-success text-white" onclick="next18()">Next</button>
+            </div>
+        </div>
+
+        <!-- NINEEENTH QUIZ -->
+        <div class="card p-3 text-white" style="width: 40rem;" id="nineteenthCard">
+            <h1 class=" fw-bold" id="quizz">Giftech Quiz</h1>
+            <div class="d-flex justify-content-between">
+                <h3>Question 19/20</h3>
+                <div class="pe-5" id="revie19"></div>
+            </div>
+            <p class="fw-bold"> Which of the following elements is Halogen? <input type="text" name="answers19"
+                    id="answers19" placeholder=" ???" value="" class="rounded-2 fw-bold"
+                    style="height: 35px;"></p>
+            <ol type="A" id="forList">
+                <li class="mt-3 fw-bold" id="neon" onclick="answers19.value = 'Neon'"> Neon</li>
+                <li class="mt-3 fw-bold" id="flu" onclick="answers19.value = 'Fluorine'"> Fluorine</li>
+                <li class="mt-3 fw-bold" id="hel" onclick="answers19.value = 'Helium'"> Helium</li>
+                <li class="mt-3 fw-bold" id="arg" onclick="answers19.value = 'Argon'"> Argon</li>
+            </ol>
+            <div class="d-flex justify-content-evenly" id="downbtn">
+                <!-- <button class="btn bg-success text-white" onclick="submitt19()">Submit</button> -->
+                <button class="btn bg-success text-white" onclick="next19()">Next</button>
+            </div>
+        </div>
+
+        <!-- TWENTYY QUIZ -->
+        <div class="card p-3 text-white" style="width: 40rem;" id="twentyyCard">
+            <h1 class=" fw-bold" id="quizz">Giftech Quiz</h1>
+            <div class="d-flex justify-content-between">
+                <h3>Question 20/20</h3>
+                <div class="pe-5" id="revie20"></div>
+            </div>
+            <p class="fw-bold"> What's the atomic number of carbon? <input type="text" name="answers20" id="answers20"
+                    placeholder=" ???" value="" class="rounded-2 fw-bold" style="height: 35px;"></p>
+            <ol type="A" id="forList">
+                <li class="mt-3 fw-bold" id="si6" onclick="answers20.value = '6'"> 6</li>
+                <li class="mt-3 fw-bold" id="ei8" onclick="answers20.value = '8'"> 8</li>
+                <li class="mt-3 fw-bold" id="tw12" onclick="answers20.value = '12'"> 12</li>
+                <li class="mt-3 fw-bold" id="fo14" onclick="answers20.value = '14'"> 14</li>
+            </ol>
+            <div class="d-flex justify-content-evenly" id="downbtn">
+                <button class="btn bg-success text-white" onclick="submitt20()">Submit</button>
+                <!-- <button class="btn bg-success text-white" onclick="next20()">Next</button> -->
+            </div>
+        </div>
+
+        <!-- LAST NOTE  -->
+        <div class="card p-3 text-white" style="width: 40rem;" id="lastNoteCard">
+            <h1 class=" fw-bold" id="quizz">Congratulation <span id="nname"> </span></h1>
+            <h5>You score: <span id="scores"></span><span>/20</span></h5>
+            <p id="status"></p>
+            <p>Below are the list of your answers</p>
+            <div class="d-flex">
+                <ol id="forList1">
+                    <li id="list1">How many planet do we have around the solar system? <span class="text-dark fw-bold">
+                            SEVEN</span></li>
+                    <li id="list2">Which planet is known as the red planet? <span class="text-dark fw-bold"> MARS</span>
+                    </li>
+                    <li id="list3">What's the capital of Canada? <span class="text-dark fw-bold"> OTTAWA</span> </li>
+                    <li id="list4">Who is the richest man in the world? <span class="text-dark fw-bold">ELON MUSK</span>
+                    </li>
+                    <li id="list5">Which country won the 2018 fifa worldcup? <span class="text-dark fw-bold">
+                            FRANCE</span></li>
+                    <li id="list6">Who was the first president of the United State? <span class="text-dark fw-bold">
+                            GEORGE
+                            WASHINGTON</span></li>
+                    <li id="list7">Who was the first president of Nigeria? <span class="text-dark fw-bold"> NNAMDI
+                            AZIKIWE</span>
+                    </li>
+                    <li id="list8">Which organ is primarily responsible for filtering blood and producing urine? <span
+                            class="text-dark fw-bold"> KIDNEY</span></li>
+                    <li id="list9">Identify the correct sentence... <span class="text-dark fw-bold"> SHE DOENS'NT LIKE
+                            THE
+                            MOVIE</span></li>
+                    <li id="list10">Which of the following word is synonym for "Elated"? <span
+                            class="text-dark fw-bold">
+                            JOYFUL</span></li>
+                    <li id="list11">What's the smallest ocean in the world? <span class="text-dark fw-bold"> THE ARCTIC
+                            OCEAN</span>
+                    </li>
+                    <li id="list12">Whats the square root of 64? <span class="text-dark fw-bold"> 8</span></li>
+                    <li id="list13">How many degree are in a circle? <span class="text-dark fw-bold"> 360deg</span></li>
+                    <li id="list14">if X + 17 = 25, what's the value of "X"? <span class="text-dark fw-bold"> 13</span>
+                    </li>
+                    <li id="list15">What's the next prime number after "7" <span class="text-dark fw-bold"> 11</span>
+                    </li>
+                    <li id="list16">What's the force that keeps objects anchored to the earth? <span
+                            class="text-dark fw-bold">GRAVITY</span></li>
+                    <li id="list17">What's the chemical formular of water? <span class="text-dark fw-bold"> H2O</span>
+                    </li>
+                    <li id="list18">Which of the following is a noble gas? <span class="text-dark fw-bold">
+                            HELIUM</span></li>
+                    <li id="list19">Which of the following is a noble gas? <span class="text-dark fw-bold">
+                            FLUORINE</span></li>
+                    <li id="list20">What's the atomic number of carbon? <span class="text-dark fw-bold"> 6</span></li>
+                </ol>
+            </div>
+            <div class="d-flex justify-content-evenly" id="downbtn">
+                <a class="nav-link" href="./index.html"><button class="btn bg-success text-white" onclick="restart()">Restart</button></a>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
